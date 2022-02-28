@@ -1,0 +1,33 @@
+body {
+  background-color: black;
+  margin: 0;
+}
+
+.widthBorder {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  border: 1px solid white;
+}
+
+.heightBorder {
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  border: 1px solid white;
+}
+
+img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.position {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(25%, 20%);
+  color: white;
+}

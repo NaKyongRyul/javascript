@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        position: fixed;
+      }
+      .scrollBy {
+        left: 300px;
+      }
+      .scrollTo {
+        left: 430px;
+      }
+      .scrollInto {
+        left: 555px;
+      }
+
+      body {
+        background-color: black;
+        margin: 0;
+      }
+      .rect {
+        width: 100px;
+        height: 100px;
+        background-color: bisque;
+        margin: 2px 0;
+      }
+      .special {
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="scrollBy">scroll by 100px(y)</button>
+    <button class="scrollTo">scroll to 100px(y)</button>
+    <button class="scrollInto">scroll into special</button>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="special"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+    <div class="rect"></div>
+
+    <script>
+      const special = document.querySelector(".special");
+      const scrollBy = document.querySelector(".scrollBy");
+      const scrollTo = document.querySelector(".scrollTo");
+      const scrollInto = document.querySelector(".scrollInto");
+
+      special.addEventListener("click", (e) => {
+        console.log(special.getBoundingClientRect());
+        console.log(e.clientX);
+        console.log(e.clientY);
+        console.log(e.pageX);
+        console.log(e.pageY);
+      });
+
+      scrollBy.addEventListener("click", () => {
+        window.scrollBy(0, 100);
+      });
+
+      scrollTo.addEventListener("click", () => {
+        window.scrollTo(0, 100);
+      });
+
+      scrollInto.addEventListener("click", () => {
+        special.scrollIntoView();
+      });
+    </script>
+  </body>
+</html>

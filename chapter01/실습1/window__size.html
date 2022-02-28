@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .size {
+        display: flex;
+        flex-direction: column;
+        background-color: antiquewhite;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="size">
+      <span class="screen">window.screen</span>
+      <span class="outer">window.outer</span>
+      <span class="inner">window.inner</span>
+      <span class="client">documentElement.client.Width</span>
+    </div>
+
+    <script>
+      const screen = document.querySelector(".screen");
+      const outer = document.querySelector(".outer");
+      const inner = document.querySelector(".inner");
+      const client = document.querySelector(".client");
+
+      function update() {
+        screen.innerText = `window.screen: ${window.screen.width}, ${window.screen.height}`;
+        outer.innerText = `window.outer: ${window.outerWidth}, ${window.outerHeight}`;
+        inner.innerText = `window.inner: ${window.innerWidth}, ${window.innerHeight}`;
+        client.innerText = `documentElement.client.Width: ${document.documentElement.clientWidth}, ${document.documentElement.clientHeight}`;
+      }
+      window.addEventListener("resize", update);
+      update();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: darkgray;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  transition: transform 300ms ease-in;
+}
+
+button:hover {
+  color: red;
+  transform: scale(1.1);
+}
+.section {
+  width: 400px;
+  margin: auto;
+}
+.header {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50% 50% 0 0;
+  /* height: 40px; */
+}
+
+.list {
+  background-color: cornsilk;
+  margin: 0;
+  height: 500px;
+  overflow-y: auto;
+}
+.item {
+  font-size: 24px;
+  padding: 8px;
+  display: flex;
+  justify-content: space-between;
+}
+.item__name {
+  margin-left: 30px;
+}
+
+.trashButton {
+  font-size: 24px;
+  margin-right: 30px;
+}
+
+.fa-trash-alt {
+  cursor: pointer;
+}
+
+.footer {
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+  border-radius: 0 0 50% 50%;
+}
+input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  font-size: 24px;
+  outline: none;
+  padding: 0 16px;
+}
+
+.addBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  font-size: 24px;
+  margin: 8px;
+  cursor: pointer;
+}
